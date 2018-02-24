@@ -1,0 +1,21 @@
+<layout id="WatchFace">
+	<drawable class="Background" id="Background"/>
+	<drawable id="BottomGauge" class="Gauge" >
+		<param name="locX">73</param>
+		<param name="locY">128</param>
+		<param name="width">72</param>
+		<param name="height">72</param>
+	</drawable>
+	<drawable id="LeftGauge" class="Gauge">
+		<param name="locX">26</param>
+		<param name="locY">46</param>
+		<param name="width">72</param>
+		<param name="height">72</param>
+	</drawable>
+ 	<drawable id="RightGauge" class="Gauge">
+		<param name="locX">120</param>
+		<param name="locY">46</param>
+		<param name="width">72</param>
+		<param name="height">72</param>
+	</drawable>
+</layout>

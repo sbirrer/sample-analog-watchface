@@ -1,0 +1,15 @@
+<strings>
+
+    <string id="AppName">sample-analog-watchface</string>
+
+    <string id="BackgroundColorTitle">Hintergrundfarbe</string>
+    <string id="ForegroundColorTitle">Vordergrundfarbe</string>
+
+    <string id="ColorBlack">Schwarz</string>
+    <string id="ColorDarkGray">Dunkelgrau</string>
+    <string id="ColorLightGray">Hellgrau</string>
+    <string id="ColorWhite">Weiss</string>
+    <string id="ColorBlue">Blau</string>
+    <string id="ColorRed">Rot</string>
+
+</strings>
