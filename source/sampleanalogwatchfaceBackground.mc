@@ -21,11 +21,19 @@ class Background extends Ui.Drawable {
 		var outerHashRadius = dc.getWidth() / 2;
 
 		for (var min = 0; min < 60; min++) {
+			var innerHashRadius = shortInnerHashRadius;
+			var penWidth = 1;
+			
+			if (min % 5 == 0) {
+				innerHashRadius = longInnerHashRadius;
+				penWidth = 3;
+			}
+			
 			var hash = 
 				[
 					[
-						(min%5 == 0 ? longInnerHashRadius : shortInnerHashRadius) * Math.cos(min*Math.PI/30) + center[0], 
-						(min%5 == 0 ? longInnerHashRadius : shortInnerHashRadius) * Math.sin(min*Math.PI/30) + center[1]
+						innerHashRadius * Math.cos(min*Math.PI/30) + center[0], 
+						innerHashRadius * Math.sin(min*Math.PI/30) + center[1]
 					], 
 					[
 						outerHashRadius * Math.cos(min*Math.PI/30) + center[0], 
@@ -33,7 +41,15 @@ class Background extends Ui.Drawable {
 					]
 				];
 			
+			dc.setColor(Gfx.COLOR_LT_GRAY, App.getApp().getProperty("BackgroundColor"));
+			dc.setPenWidth(penWidth);
 			dc.drawLine(hash[0][0], hash[0][1], hash[1][0], hash[1][1]);
+			
+			if (min % 5 == 0) {
+				dc.setPenWidth(1);
+				dc.setColor(Gfx.COLOR_WHITE, App.getApp().getProperty("BackgroundColor"));
+				dc.drawLine(hash[0][0], hash[0][1], hash[1][0], hash[1][1]);
+			}
 		}
 	}
 
